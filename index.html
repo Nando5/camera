@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Camera Parallax Scrolling Site</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+        <ul id="nav"> 
+                <li><a href="#cta" data-menu-top="1250p">My GitHub</a></li>
+                <li><a href="#about" data-menu-top="320p">About</a></li>
+                <li><a href="#home" data-menu-top="0">Home</a></li>
+        </ul>
+        
+        <header 
+            data-start="opacity: 1; transform: translateY(0px)"
+            data-100-start="opacity: 0; transform: translateY(-15px)"
+            id="home"
+        >
+            <div class="wrapper clearfix">
+
+                <h1 class="title"><span>Camera ZX30</span><br>Optimum Accessories</h1>
+                <p class="intro"><span id="show-on-mobile">Best viewed on a desktop.</span>
+                                <span id="show-on-desktop">Scroll to play this website.</span>Built with Skrollr.js</p>
+            </div>
+        </header>
+
+        <div class="psm-background"
+            data-anchor-target="header"
+            data-250p-start="transform[cubic]: translateX(0%); overflow: hidden;"
+            data-300p-start="transform[cubic]: translateX(-50%); overflow: hidden;"
+            data-820p-start="transform[cubic]: translateX(-50%); overflow: hidden;"
+            data-920p-start="transform[cubic]: translateX(-100%); overflow: visible;"
+        >
+
+            <div class="bcg-container" id="bcg-01">
+                <div class="bcg focuspoint"
+                data-focus-x="0"
+                data-focus-y="0"
+                data-image-w="1800"
+                data-image-h="1200">
+                    <img src="img/img_background-01.jpg" alt="" />
+                </div> 
+            </div>
+
+            <div class="bcg-container" id="bcg-02"
+                data-anchor-target="header"
+                data-50p-start="opacity: 0"
+                data-100p-start="opacity: 1"
+            >
+                <div class="bcg focuspoint"
+                data-focus-x="0"
+                data-focus-y="0"
+                data-image-w="1800"
+                data-image-h="1200">
+                    <img src="img/img_background-02.jpg" alt="" />
+                </div> 
+            </div> 
+
+             <div class="bcg-container" id="bcg-03"
+                data-anchor-target="header"
+                data-150p-start="opacity: 0"
+                data-250p-start="opacity: 1"
+             >
+                <div class="bcg focuspoint"
+                data-focus-x="0"
+                data-focus-y="0"
+                data-image-w="1800"
+                data-image-h="1200">
+                    <img src="img/img_background-03.jpg" alt="" />
+                </div> 
+            </div> 
+
+            <div class="bcg-container" id="bcg-04"
+                data-anchor-target="header"
+                data-819p-start="transform[cubic]: translateX(200%) translateY(0%)scale(1); opacity: 0"
+                data-820p-start="transform[cubic]: translateX(200%) translateY(0%)scale(1);; opacity: 1"
+                data-1020p-start="transform[cubic]: translateX(100%) translateY(0%)scale(1);; opacity: 1"
+                data-1100p-start="transform[cubic]: translateX(100%) translateY(0%)scale(1);; opacity: 1"
+                data-1200p-start="transform[cubic]: translateX(100%) translateY(-7%)scale(0.6);; opacity: 1"
+             >
+                <div class="bcg focuspoint"
+                data-focus-x="0"
+                data-focus-y="0"
+                data-image-w="1800"
+                data-image-h="1200">
+                    <img src="img/img_background-04.jpg" alt="" />
+                </div> 
+            </div> 
+
+
+
+                <!-- svg of camera to animate -->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="cameraSVG" x="0" y="0" viewBox="0 0 1800 1200" xml:space="preserve" enable-background="new 0 0 1800 1200">
+                <style>
+                    .s0{
+                        fill:none;
+                        stroke-miterlimit:10;
+                        stroke-width:4;
+                        stroke:#ffff00;
+                    }
+                </style> 
+
+                    <path d="M1371.4 436.6c-12.4-33-22.7-48-32-57.3 -9.3-9.3-24.8-10.8-24.8-10.8s0.5-2.6-9.8-9.8c-10.3-7.2-20.1-6.6-39.2-5 -19.1 1.5-25.9 14.3-25.9 14.3s-7.5-1.2-19.2 2c-12.1 3.3-22.7 16.6-22.7 16.6l-47.9-0.2v-36.2h-138.9v35.5l-20.2-0.1c0 0-4-1.9-16.2-12.2 -14.1-11.8-20.9-25.9-40.5-66.4 -14-29.1-30.1-41.7-39.9-48.9 -17.2-12.5-37.2-14.5-58-15 -60.7-1.6-105.7 0.1-134.7 4.2 -29 4.2-48.7 36.2-70 63.9 -21.2 27.7-43.8 39.8-72 57.4 -28.1 17.6-57.4 24.5-70.4 29.2 -33.4 12.1-44.4 24.4-57.4 54.4 -10.3 23.7-5.2 48.5-5.2 96.5 0 48 0 198.2 0 267.9 0 55.7 0.3 67.1 17.6 84.4 17.5 17.5 25.8 19.3 81.6 19.3 54.7 0 346.9 0 468.7 0s245.2 1.4 297.9 0c54.4-1.4 59.1-8.7 73.3-23.9 11.7-12.5 12.3-26.2 12.3-68s0-263.3 0-297.3S1383.8 469.7 1371.4 436.6z" class="s0"
+                        stroke-dasharray="3300"
+                        stroke-dashoffset="3300"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 3300; opacity: 1"
+                        data--100-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                    />
+                  <circle cx="1138.9" cy="519.6" r="26.2" class="s0"
+                        stroke-dasharray="500"
+                        stroke-dashoffset="500"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 500; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 500; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="497.8" cy="519.6" r="19.8" class="s0"
+                        stroke-dasharray="150"
+                        stroke-dashoffset="150"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 150; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 150; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="786.2" cy="381.7" r="19.8" class="s0"
+                        stroke-dasharray="150"
+                        stroke-dashoffset="150"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 150; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 150; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="497.8" cy="610.5" r="19.8" class="s0"
+                        stroke-dasharray="150"
+                        stroke-dashoffset="150"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 150; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 150; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="494" cy="780.9" r="13.9" class="s0"
+                        stroke-dasharray="150"
+                        stroke-dashoffset="150"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 150; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 150; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="506.8" cy="841.7" r="13.9" class="s0"
+                        stroke-dasharray="150"
+                        stroke-dashoffset="150"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 150; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 150; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="1236.1" cy="519.6" r="26.2" class="s0"
+                        stroke-dasharray="500"
+                        stroke-dashoffset="500"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 500; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 500; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="1190" cy="729" r="26.2" class="s0"
+                        stroke-dasharray="500"
+                        stroke-dashoffset="500"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 500; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 500; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <circle cx="1190" cy="729" r="89.2" class="s0"
+                        stroke-dasharray="1000"
+                        stroke-dashoffset="1000"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 1000; opacity: 1"
+                        data--10-top-bottom="@stroke-dashoffset: 1000; opacity: 1"
+                        data--130-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <path d="M1269.7 453.2h-360V324.8c0-13-10.7-23.7-23.7-23.7H681.3c-13 0-23.7 10.7-23.7 23.7v128.4H503.2c-23.5 0-42.8 19.2-42.8 42.8v352.2c0 23.5 19.2 42.8 42.8 42.8h766.4c23.5 0 42.8-19.2 42.8-42.8V496C1312.4 472.4 1293.2 453.2 1269.7 453.2z" class="s0"
+                        stroke-dasharray="3300"
+                        stroke-dashoffset="3300"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 3300; opacity: 1"
+                        data--100-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <path d="M872.7 447.4H695.5c-5.6 0-10.2-4.6-10.2-10.2V334.8c0-5.6 4.6-10.2 10.2-10.2h177.2c5.6 0 10.2 4.6 10.2 10.2v102.5C883 442.8 878.4 447.4 872.7 447.4z" class="s0"
+                        stroke-dasharray="3300"
+                        stroke-dashoffset="3300"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 3300; opacity: 1"
+                        data--100-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <path d="M1038.7 872.9H564.8c-14.1 0-25.7-11.6-25.7-25.7V507.3c0-14.1 11.6-25.7 25.7-25.7h473.9c14.1 0 25.7 11.6 25.7 25.7v339.9C1064.4 861.3 1052.8 872.9 1038.7 872.9z" class="s0"
+                        stroke-dasharray="3300"
+                        stroke-dashoffset="3300"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 3300; opacity: 1"
+                        data--100-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                  <rect x="558.4" y="504.3" width="482.6" height="323.5" class="s0"
+                        stroke-dasharray="3300"
+                        stroke-dashoffset="3300"
+                        data-anchor-target="header"
+                        data-top="@stroke-dashoffset: 3300; opacity: 1"
+                        data--100-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--150-top-bottom="@stroke-dashoffset: 0; opacity: 1"
+                        data--250-top-bottom="@stroke-dashoffset: 0; opacity: 0"
+                  />
+                </svg>
+        </div> <!-- end of psm-background container -->
+
+        <main> <!-- contains accessory features and finally call to action section ie. 'cta' button -->
+            
+            <div class="wrapper">
+
+                <article id="about" class="features"
+                    data-anchor-target="header"
+                    data-300p-start="transform: translate(-27%, -60%); opacity: 0"
+                    data-320p-start="transform: translate(-30%, -60%); opacity: 1"
+                    data-420p-start="transform: translate(-30%, -60%); opacity: 1"
+                    data-480p-start="transform: translate(-27%, -60%); opacity: 0"
+                >
+                    <h2>Camera ZX30 AF-1 Digital Flash</h2>
+                    <p>The Camera ZX30 24 AF-1 digital is perfect when you’re on the go. Thanks to the compact, slim-line and lightweight design it can be stashed easily in a jacket pocket and is at hand just when you need it. </p>
+
+                    <div id="acc-01"></div>
+
+                </article>
+
+                <article class="features"
+                    data-anchor-target="header"
+                    data-500p-start="transform: translate(-27%, -60%); opacity: 0"
+                    data-520p-start="transform: translate(-30%, -60%); opacity: 1"
+                    data-620p-start="transform: translate(-30%, -60%); opacity: 1"
+                    data-680p-start="transform: translate(-27%, -60%); opacity: 0"
+                >
+                    <h2>18-50mm f/1.8 DC HSM Art Lens</h2>
+                    <p>The 18-50mm f/1.8 DC HSM Art Lens is the first wide-angle to standard zoom lens to achieve a large aperture of 1.8. Designed specifically for APS-C sized sensors. These lenses use motor driven by ultrasonic waves to provide a quiet, high-speed AF.</p>
+
+                    <div id="acc-02"></div>
+
+                </article>
+
+                <article class="features"
+                    data-anchor-target="header"
+                    data-700p-start="transform: translate(-27%, -60%); opacity: 0"
+                    data-720p-start="transform: translate(-30%, -60%); opacity: 1"
+                    data-820p-start="transform: translate(-30%, -60%); opacity: 1"
+                    data-880p-start="transform: translate(-27%, -60%); opacity: 0"
+                >
+                    <h2>32GB Micro Digital Memory Card (STC)</h2>
+                    <p>Introducing the new Camera 32GB Class 4 microSTC Memory Card, specially designed for the ZX30 and other microSTC compatible devices. Free software is available via seperate download. </p>
+
+                    <div id="acc-03"></div>
+
+                </article>
+
+                <div class="bcg-container" id="bcg-05">
+                    <div class="bcg focuspoint"
+                    data-focus-x="0"
+                    data-focus-y="0"
+                    data-image-w="1800"
+                    data-image-h="1200">
+                        <img src="img/img_background-04.jpg" alt="" />
+                    </div> 
+                </div>
+
+
+                
+                <div id="cta"
+                    data-anchor-target="header"
+                    data-1199p-start="opacity: 0; display: none"
+                    data-1200p-start="opacity: 0; display: block"
+                    data-1250p-start="opacity: 1; display: block"
+                >
+                <h2>Camera ZX30</h2>
+                <a href="#" class="button">My GitHub</a></div>
+            </div>
+
+        </main> <!-- /main -->
+        
+        <footer>
+            <div class="wrapper clearfix">
+                <p>&copy; 2015 W. Fernando Lucero - Front End Web Developer</p>
+            </div>
+        </footer>
+
+        <!-- additional javascript links -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script type="text/javascript" src="js/skrollr.min.js"></script>
+        <script type="text/javascript" src="js/skrollr.menu.min.js"></script>
+        <script type="text/javascript">
+        var s = skrollr.init();
+        </script> <!-- initializes skrollr -->
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
