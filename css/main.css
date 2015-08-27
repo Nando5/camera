@@ -178,6 +178,10 @@ a.button {
     text-align: center;
 }
 
+a.button:hover {
+    background-color: #E6C304;
+}
+
 
 /* =Header */
 header {
